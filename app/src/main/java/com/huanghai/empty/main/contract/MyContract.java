@@ -18,7 +18,7 @@ public interface MyContract {
 
     }
     interface MyModel extends CoreBaseModel{
-        Observable<MyListBean> getMyData();//获取观察对象
+        Observable<Object> getMyData();//获取观察对象
     }
 
     interface MyView extends CoreBaseView{

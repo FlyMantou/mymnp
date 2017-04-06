@@ -13,7 +13,7 @@ import rx.Observable;
 
 public class MyModel implements MyContract.MyModel{
     @Override
-    public Observable<MyListBean> getMyData() {
+    public Observable<Object> getMyData() {
         return RxService.createApi(MainApi.class).getMyList().compose(RxUtil.rxSchedulerHelper());
     }
 }

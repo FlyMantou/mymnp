@@ -5,15 +5,22 @@ package com.huanghai.empty.main.model;
  */
 
 public class MyListBean {
-    private String imgUrl;
-    private String name;
+    /**
+     * ip : 192.168.0.102
+     * name : 电信 艾欧尼亚
+     * count : 138
+     */
 
-    public String getImgUrl() {
-        return imgUrl;
+    private String ip;
+    private String name;
+    private int count;
+
+    public String getIp() {
+        return ip;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
     public String getName() {
@@ -23,4 +30,14 @@ public class MyListBean {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+    //  {"ip":"192.168.0.102","name":"电信 艾欧尼亚","count":138}
+
 }
