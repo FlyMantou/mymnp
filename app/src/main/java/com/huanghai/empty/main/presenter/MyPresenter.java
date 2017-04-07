@@ -11,4 +11,14 @@ public class MyPresenter extends MyContract.MyPresenter{
     public void onStart() {
 
     }
+
+
+    @Override
+    public void getMybList(int num,int page) {
+        mRxManager.add(mModel.getMyData(num,page)
+                .subscribe(
+                        myListBean -> mView.showList(myListBean)
+                        , e -> mView.showError("数据加载失败ヽ(≧Д≦)ノ")
+                ));
+    }
 }

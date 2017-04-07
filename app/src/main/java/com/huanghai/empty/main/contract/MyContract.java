@@ -15,10 +15,10 @@ import rx.Observable;
 public interface MyContract {
     //主页接口
     abstract class MyPresenter extends CoreBasePresenter<MyModel,MyView>{
-
+        public abstract void getMybList(int num,int page);
     }
     interface MyModel extends CoreBaseModel{
-        Observable<Object> getMyData();//获取观察对象
+        Observable<MyListBean> getMyData(int num,int page);//获取观察对象
     }
 
     interface MyView extends CoreBaseView{

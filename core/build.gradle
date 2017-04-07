@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-apply plugin: 'me.tatarka.retrolambda'
+
 
 version = "1.0.0"
 
@@ -25,6 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
@@ -76,6 +77,9 @@ dependencies {
 
     //Butterknife
     compile 'com.jakewharton:butterknife:8.2.1'
+
+
+
     //fragmentation
     compile 'me.yokeyword:fragmentation:0.7.13'
     //permissions
@@ -162,7 +166,7 @@ bintray {
         publish = true  //是否发布
     }
 }
-
+apply plugin: 'me.tatarka.retrolambda'
 
 buildscript {
     repositories {
@@ -178,4 +182,4 @@ repositories {
     mavenCentral()
 }
 
-apply plugin: 'me.tatarka.retrolambda'
+

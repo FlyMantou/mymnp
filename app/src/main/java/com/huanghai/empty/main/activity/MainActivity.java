@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.hpw.mvpframe.base.CoreBaseActivity;
+import com.hpw.mvpframe.utils.LogUtil;
 import com.hpw.mvpframe.utils.ToastUtils;
 import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
 import com.hpw.mvpframe.widget.recyclerview.BaseViewHolder;
@@ -18,9 +19,10 @@ import com.huanghai.empty.main.model.MyModel;
 import com.huanghai.empty.main.presenter.MyPresenter;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends CoreBaseActivity<MyPresenter,MyModel>{
-
+    private static int pageNum = 10;
     @BindView(R.id.recyclerview)
     CoreRecyclerView coreRecyclerView;
     @Override
@@ -30,12 +32,17 @@ public class MainActivity extends CoreBaseActivity<MyPresenter,MyModel>{
 
     @Override
     public void initView(Bundle savedInstanceState) {//初始化页面数据
+
+       // coreRecyclerView = (CoreRecyclerView) findViewById(R.id.recyclerview);
         coreRecyclerView.init(new BaseQuickAdapter<MyListBean, BaseViewHolder>(R.layout.item_my) {
             @Override
             protected void convert(BaseViewHolder helper, MyListBean item) {
+                //glide加载图片
+               // Glide.with(mContext).load(item.getPicUrl()).crossFade().into((ImageView) helper.getView(R.id.iv_wechat_item_image));
                 helper.setText(R.id.textView, item.getIp())
                         .setText(R.id.textView2,item.getName())
                         .setText(R.id.textView3,item.getCount()+"");
+
               //  Glide.with(mContext).load(item.getImages().get(0)).crossFade().placeholder(R.mipmap.def_head).into((ImageView) helper.getView(R.id.iv_daily_item_image));
             }
         }).addOnItemClickListener(new OnItemClickListener() {
@@ -43,8 +50,12 @@ public class MainActivity extends CoreBaseActivity<MyPresenter,MyModel>{
             public void SimpleOnItemClick(BaseQuickAdapter adapter, View view, int position) {
                 ToastUtils.showToast(MainActivity.this,"点击了第："+position+"条目");
             }
-        });
+        }).openLoadMore(pageNum, page -> mPresenter.getMybList(pageNum, page))
+                .openRefresh();
+
     }
+
+
 
 
 }
