@@ -24,6 +24,7 @@ import com.hpw.mvpframe.utils.TitleBuilder;
 import com.hpw.mvpframe.utils.ToastUtils;
 import com.hpw.mvpframe.widget.SwipeBackLayout;
 
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
@@ -63,10 +64,15 @@ public abstract class CoreBaseActivity<T extends CoreBasePresenter, E extends Co
                 SpUtil.getNightModel(this) ? 1 : 0]);
         this.setContentView(this.getLayoutId());
         binder = ButterKnife.bind(this);
+
         mContext = this;
         mPresenter = TUtil.getT(this, 0);
         mModel = TUtil.getT(this, 1);
-        if (this instanceof CoreBaseView) mPresenter.attachVM(this, mModel);
+
+        if (this instanceof CoreBaseView) {
+            mPresenter.attachVM(this, mModel);
+        }
+
         this.initView(savedInstanceState);
         AppManager.getAppManager().addActivity(this);
     }

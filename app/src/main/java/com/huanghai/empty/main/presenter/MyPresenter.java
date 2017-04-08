@@ -1,5 +1,6 @@
 package com.huanghai.empty.main.presenter;
 
+import com.hpw.mvpframe.utils.ToastUtils;
 import com.huanghai.empty.main.contract.MyContract;
 
 /**
@@ -15,6 +16,7 @@ public class MyPresenter extends MyContract.MyPresenter{
 
     @Override
     public void getMybList(int num,int page) {
+
         mRxManager.add(mModel.getMyData(num,page)
                 .subscribe(
                         myListBean -> mView.showList(myListBean)
