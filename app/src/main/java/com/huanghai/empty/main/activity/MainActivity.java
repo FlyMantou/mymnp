@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import com.hpw.mvpframe.base.CoreBaseActivity;
+import com.hpw.mvpframe.utils.LogUtil;
 import com.hpw.mvpframe.utils.ToastUtils;
 import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
 import com.hpw.mvpframe.widget.recyclerview.BaseViewHolder;
@@ -32,9 +33,9 @@ public class MainActivity extends CoreBaseActivity<MyPresenter,MyModel> implemen
 
     @Override
     public void initView(Bundle savedInstanceState) {//初始化页面数据
-        coreRecyclerView.init(new BaseQuickAdapter<MyListBean, BaseViewHolder>(R.layout.item_my) {
+        coreRecyclerView.init(new BaseQuickAdapter<MyListBean.DataEntity, BaseViewHolder>(R.layout.item_my) {
             @Override
-            protected void convert(BaseViewHolder helper, MyListBean item) {
+            protected void convert(BaseViewHolder helper, MyListBean.DataEntity item) {
                 //glide加载图片
                 // Glide.with(mContext).load(item.getPicUrl()).crossFade().into((ImageView) helper.getView(R.id.iv_wechat_item_image));
                 helper.setText(R.id.textView, item.getIp())
@@ -56,16 +57,21 @@ public class MainActivity extends CoreBaseActivity<MyPresenter,MyModel> implemen
 
     @Override
     public Context getContext() {
-        return null;
+        return this;
     }
 
     @Override
     public void showError(String msg) {
 
+        System.out.print("msg:");
     }
 
     @Override
     public void showList(MyListBean info) {
-        coreRecyclerView.getAdapter().addData(info);
+        String s = info.toString();
+        LogUtil.i(s);
+        coreRecyclerView.getAdapter().addData(info.getData());
     }
+
+
 }

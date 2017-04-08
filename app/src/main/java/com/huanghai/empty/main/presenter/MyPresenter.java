@@ -1,6 +1,5 @@
 package com.huanghai.empty.main.presenter;
 
-import com.hpw.mvpframe.utils.ToastUtils;
 import com.huanghai.empty.main.contract.MyContract;
 
 /**
@@ -20,7 +19,7 @@ public class MyPresenter extends MyContract.MyPresenter{
         mRxManager.add(mModel.getMyData(num,page)
                 .subscribe(
                         myListBean -> mView.showList(myListBean)
-                        , e -> mView.showError("数据加载失败ヽ(≧Д≦)ノ")
+                        , e -> mView.showError("数据加载失败ヽ(≧Д≦)ノ"+e)
                 ));
     }
 }
