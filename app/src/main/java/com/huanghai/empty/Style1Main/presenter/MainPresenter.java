@@ -8,7 +8,12 @@ import com.huanghai.empty.Style1Main.contract.MainContract;
 
 public class MainPresenter extends MainContract.MainPresenter{
     @Override
-    public void onStart() {
+    public void getTabList() {
+        mView.showTabList(mModel.getTabs(),mModel.getTabsIcon());
+    }
 
+    @Override
+    public void onStart() {
+        getTabList();
     }
 }

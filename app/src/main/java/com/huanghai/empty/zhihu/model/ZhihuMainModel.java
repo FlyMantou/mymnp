@@ -10,7 +10,9 @@ import com.huanghai.empty.zhihu.contract.ZhihuContract;
 public class ZhihuMainModel implements ZhihuContract.ZhihuMainModel {
     @Override
     public String[] getTabs() {
-        String[] mTabs = {"日报", "专栏", "微信", "热门"};
+        String[] mTabs = {"教学楼", "操场", "食堂", "商店","宿舍"};
         return mTabs;//暂时不从网络取
     }
+
+
 }

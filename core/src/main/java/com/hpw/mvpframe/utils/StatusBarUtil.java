@@ -172,6 +172,7 @@ public class StatusBarUtil {
             return;
         }
         transparentStatusBar(activity);
+
         setRootView(activity);
     }
 
