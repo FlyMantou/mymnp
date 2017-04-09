@@ -6,18 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/brown" />
+        android:background="@drawable/huanghaisplash" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="100dp"
-        android:padding="30dp"
-        android:gravity="center"
-        android:lineSpacingMultiplier="1.4"
-        android:text="千里之行，始于足下 冰冻三尺非一日之寒"
-        android:textColor="@android:color/black"
-        android:textSize="30sp" />
 
 </FrameLayout>
