@@ -9,8 +9,10 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.hpw.mvpframe.base.CoreBaseActivity;
 import com.hpw.mvpframe.base.CoreBaseFragment;
@@ -119,7 +121,19 @@ public class MainFragment extends CoreBaseFragment<MainPresenter, MainModel> imp
     public void showTabList(String[] mTabs,int[] mTabsIcons) {
         //TabLayout配合ViewPager有时会出现不显示Tab文字的Bug,需要按如下顺序
         for (int i = 0; i < mTabs.length; i++) {
-            tabs.addTab(tabs.newTab().setText(mTabs[i]).setIcon(mTabsIcons[i]));
+            /*TabLayout.Tab tab=tabs.newTab();
+            View view= LayoutInflater.from(getActivity()).inflate(R.layout.layout_tabbar_item,null);
+            TextView tv= (TextView) view.findViewById(R.id.main_tv);
+            tv.setText(mTabs[i]);
+            view.findViewById(R.id.img).setBackgroundResource(mTabsIcons[i]);
+
+            tab.setCustomView(view);
+            if (i==0)
+                tv.setFocusable(true);*/
+
+
+
+           tabs.addTab(tabs.newTab().setText(mTabs[i]).setIcon(mTabsIcons[i]));
 
             switch (i) {
                 case 0:
@@ -146,7 +160,7 @@ public class MainFragment extends CoreBaseFragment<MainPresenter, MainModel> imp
         tabs.setVerticalScrollbarPosition(position);
         for (int i = 0; i < mTabs.length; i++) {
             tabs.getTabAt(i).setText(mTabs[i]).setIcon(mTabsIcons[i]);
-        }
+       }
     }
 
     @Override
