@@ -38,6 +38,8 @@
         <activity android:name=".Style1Main.activity.MainActivity"
             android:launchMode="singleTask"
             />
+        <activity android:name=".zhihu.activity.ZhihuDetailsActivity"/>
+        <activity android:name=".aboutme.AboutMeActivity"/>
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import com.hpw.mvpframe.R;
 import com.hpw.mvpframe.widget.recyclerview.animation.BaseAnimation;
 import com.hpw.mvpframe.widget.recyclerview.listener.OnItemClickListener;
 
+
 /**
  * Created by hpw on 16/11/1.
  */
@@ -76,6 +77,8 @@ public class CoreRecyclerView extends LinearLayout implements BaseQuickAdapter.R
             mRecyclerView = (RecyclerView) findViewById(R.id.rv_list1);
             mRecyclerView.setVisibility(VISIBLE);
         }
+
+
         mRecyclerView.setLayoutManager(layoutManager != null ? layoutManager : new LinearLayoutManager(getContext()));
         this.mQuickAdapter = mQuickAdapter;
         mRecyclerView.setAdapter(mQuickAdapter);

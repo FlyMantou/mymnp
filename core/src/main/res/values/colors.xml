@@ -51,4 +51,13 @@
     <color name="bg_position_bar_up">#0D8BC34A</color>
     <color name="bg_position_bar_down">#1A8BC34A</color>
     <color name="theme_black_7f">#8f000000</color>
+
+    <color name="indicator_1">#55B3C2</color>
+    <color name="indicator_2">#64A4A4</color>
+    <color name="indicator_3">#66D7B9</color>
+    <color name="indicator_4">#FDBC7D</color>
+
+    <color name="si_default_text_color">#FF0000</color>
+    <color name="si_default_text_color_selected">#FF00FF</color>
+    <color name="si_default_indicator_bg">#ee9999</color>
 </resources>

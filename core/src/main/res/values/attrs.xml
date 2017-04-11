@@ -10,4 +10,6 @@
         <attr name="rvp_flingFactor" format="float" />
         <attr name="rvp_singlePageFling" format="boolean" />
     </declare-styleable>
+
+
 </resources>

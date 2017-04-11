@@ -69,11 +69,11 @@ public class ZhihuMainFragment extends CoreBaseFragment<ZhihuMainPresenter, Zhih
             SpUtil.setNightModel(mContext, false);
             ((CoreBaseActivity) getActivity()).reload();
             return true;
-        } else if (id == R.id.night) {
+        } /*else if (id == R.id.night) {
             SpUtil.setNightModel(mContext, true);
             ((CoreBaseActivity) getActivity()).reload();
             return true;
-        }
+        }*/
         return false;
     }
 

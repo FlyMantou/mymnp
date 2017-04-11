@@ -13,6 +13,7 @@ import com.hpw.mvpframe.utils.DisplayUtils;
 import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
 import com.hpw.mvpframe.widget.recyclerview.BaseViewHolder;
 import com.hpw.mvpframe.widget.recyclerview.CoreRecyclerView;
+import com.hpw.mvpframe.widget.recyclerview.animation.BaseAnimation;
 import com.huanghai.empty.App;
 import com.huanghai.empty.R;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
@@ -54,6 +55,8 @@ public class SectionFragment extends CoreBaseFragment<SectionPresenter, SectionM
                                     ((SupportFragment) getParentFragment()).start(SectionListFragment.newInstance(item.getId(), item.getName()));
                                 });
                     }
+
+
                 });
         return coreRecyclerView;
     }

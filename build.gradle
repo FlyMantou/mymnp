@@ -24,6 +24,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+
     }
     tasks.withType(Javadoc) {
         options.addStringOption('Xdoclint:none', '-quiet')
@@ -34,6 +35,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
 ext {
     // Sdk and tools
     minSdkVersion = 15

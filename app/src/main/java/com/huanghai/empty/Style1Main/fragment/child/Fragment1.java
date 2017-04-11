@@ -23,6 +23,7 @@ import com.huanghai.empty.zhihu.model.dailymodel.DailyModel;
 import com.huanghai.empty.zhihu.presenter.dailypresenter.DailyPresenter;
 
 
+
 /**
  * Created by hpw on 16/10/31.
  */
@@ -46,11 +47,11 @@ public class Fragment1 extends CoreBaseFragment<DailyPresenter, DailyModel> impl
         }).addOnItemClickListener(new OnItemClickListener() {
             @Override
             public void SimpleOnItemClick(BaseQuickAdapter adapter, View view, int position) {
-//                showToast("点击了" + position);
-//                ((SupportFragment) getParentFragment()).start(DailyDetailsFragment.newInstance(((DailyListBean.StoriesBean) adapter.getData().get(position)).getId()));
                 ZhihuDetailsActivity.start(mActivity, view.findViewById(R.id.iv_daily_item_image), ((DailyListBean.StoriesBean) adapter.getData().get(position)).getId());
             }
-        });
+        }).openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
+
+
         return coreRecyclerView;
     }
 
@@ -60,6 +61,7 @@ public class Fragment1 extends CoreBaseFragment<DailyPresenter, DailyModel> impl
         vpTop = (LoopRecyclerViewPager) view1.findViewById(R.id.vp_top);
         vpTop.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         coreRecyclerView.addHeaderView(view1);
+
     }
 
     @Override
@@ -69,6 +71,9 @@ public class Fragment1 extends CoreBaseFragment<DailyPresenter, DailyModel> impl
 
     @Override
     public void showContent(DailyListBean info) {
+
+
+
         vpTop.setAdapter(new BaseQuickAdapter<DailyListBean.TopStoriesBean, BaseViewHolder>(R.layout.item_daily_header, info.getTop_stories()) {
             @Override
             protected void convert(BaseViewHolder helper, DailyListBean.TopStoriesBean item) {
@@ -78,10 +83,14 @@ public class Fragment1 extends CoreBaseFragment<DailyPresenter, DailyModel> impl
                     ZhihuDetailsActivity.start(mActivity, v.findViewById(R.id.iv_top_image), item.getId());
 //                    ((SupportFragment) getParentFragment()).start(DailyDetailsFragment.newInstance(item.getId()));
                 });
+
             }
         });
+
+
         coreRecyclerView.getAdapter().addData(info.getStories());
         mPresenter.startInterval();
+
     }
 
     @Override
@@ -92,5 +101,6 @@ public class Fragment1 extends CoreBaseFragment<DailyPresenter, DailyModel> impl
     @Override
     public void doInterval(int i) {
         vpTop.smoothScrollToPosition(i);
+
     }
 }

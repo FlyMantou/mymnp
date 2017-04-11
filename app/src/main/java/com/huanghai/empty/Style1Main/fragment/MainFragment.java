@@ -1,6 +1,7 @@
 package com.huanghai.empty.Style1Main.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -28,6 +29,7 @@ import com.huanghai.empty.Style1Main.fragment.child.Fragment4;
 import com.huanghai.empty.Style1Main.fragment.child.Fragment5;
 import com.huanghai.empty.Style1Main.model.MainModel;
 import com.huanghai.empty.Style1Main.presenter.MainPresenter;
+import com.huanghai.empty.aboutme.AboutMeActivity;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
 import com.huanghai.empty.zhihu.fragment.child.DailyFragment;
 import com.huanghai.empty.zhihu.fragment.child.QuickFragment;
@@ -77,13 +79,10 @@ public class MainFragment extends CoreBaseFragment<MainPresenter, MainModel> imp
     public boolean onMenuItemClick(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.day) {
-            SpUtil.setNightModel(mContext, false);
-            ((CoreBaseActivity) getActivity()).reload();
-            return true;
-        } else if (id == R.id.night) {
-            SpUtil.setNightModel(mContext, true);
-            ((CoreBaseActivity) getActivity()).reload();
+        if (id == R.id.day) {//关于我
+           // SpUtil.setNightModel(mContext, false);
+            //((CoreBaseActivity) getActivity()).reload();
+           getActivity().startActivity(new Intent(getActivity(), AboutMeActivity.class));
             return true;
         }
         return false;
