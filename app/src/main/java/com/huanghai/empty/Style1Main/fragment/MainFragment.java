@@ -15,10 +15,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.hpw.mvpframe.base.CoreBaseActivity;
-import com.hpw.mvpframe.base.CoreBaseFragment;
-import com.hpw.mvpframe.utils.SpUtil;
-import com.hpw.mvpframe.utils.helper.FragmentAdapter;
+import com.myhuanghai.mvpcore.base.CoreBaseActivity;
+import com.myhuanghai.mvpcore.base.CoreBaseFragment;
+import com.myhuanghai.mvpcore.utils.SpUtil;
+import com.myhuanghai.mvpcore.utils.helper.FragmentAdapter;
 import com.huanghai.empty.Constants;
 import com.huanghai.empty.R;
 import com.huanghai.empty.Style1Main.contract.MainContract;

@@ -1,6 +1,6 @@
 package com.huanghai.empty.zhihu.presenter.dailypresenter;
 
-import com.hpw.mvpframe.utils.helper.RxUtil;
+import com.myhuanghai.mvpcore.utils.helper.RxUtil;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
 
 import java.util.concurrent.TimeUnit;

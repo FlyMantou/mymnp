@@ -2,7 +2,7 @@ package com.huanghai.empty.Style1Main.activity;
 
 import android.os.Bundle;
 
-import com.hpw.mvpframe.base.CoreBaseActivity;
+import com.myhuanghai.mvpcore.base.CoreBaseActivity;
 import com.huanghai.empty.R;
 import com.huanghai.empty.Style1Main.contract.MainContract;
 import com.huanghai.empty.Style1Main.fragment.MainFragment;
@@ -15,6 +15,11 @@ import com.huanghai.empty.Style1Main.presenter.MainPresenter;
 
 public class MainActivity extends CoreBaseActivity<MainPresenter,MainModel> implements MainContract,MainFragment.OnBackToFirstListener{
 
+
+    @Override
+    protected void initData() {
+
+    }
 
     @Override
     public int getLayoutId() {

@@ -1,8 +1,8 @@
 package com.huanghai.empty.Style1Main.contract;
 
-import com.hpw.mvpframe.base.CoreBaseModel;
-import com.hpw.mvpframe.base.CoreBasePresenter;
-import com.hpw.mvpframe.base.CoreBaseView;
+import com.myhuanghai.mvpcore.base.CoreBaseModel;
+import com.myhuanghai.mvpcore.base.CoreBasePresenter;
+import com.myhuanghai.mvpcore.base.CoreBaseView;
 
 /**
  * Created by huanghai on 2017/4/8.

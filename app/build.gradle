@@ -1,6 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'android-apt'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -47,6 +45,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {
@@ -55,7 +54,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':core')
 
-    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.jakewharton:butterknife-compiler:8.5.1'
 
     compile 'info.hoang8f:fbutton:1.0.5'
 

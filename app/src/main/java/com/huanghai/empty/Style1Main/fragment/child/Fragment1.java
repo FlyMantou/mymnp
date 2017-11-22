@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.hpw.mvpframe.base.CoreBaseFragment;
-import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
-import com.hpw.mvpframe.widget.recyclerview.BaseViewHolder;
-import com.hpw.mvpframe.widget.recyclerview.CoreRecyclerView;
-import com.hpw.mvpframe.widget.recyclerview.listener.OnItemClickListener;
-import com.hpw.mvpframe.widget.recyclerview.recyclerviewpager.LoopRecyclerViewPager;
+import com.myhuanghai.mvpcore.base.CoreBaseFragment;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseQuickAdapter;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseViewHolder;
+import com.myhuanghai.mvpcore.widget.recyclerview.CoreRecyclerView;
+import com.myhuanghai.mvpcore.widget.recyclerview.listener.OnItemClickListener;
+import com.myhuanghai.mvpcore.widget.recyclerview.recyclerviewpager.LoopRecyclerViewPager;
 import com.huanghai.empty.R;
 import com.huanghai.empty.zhihu.activity.ZhihuDetailsActivity;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
@@ -101,6 +101,5 @@ public class Fragment1 extends CoreBaseFragment<DailyPresenter, DailyModel> impl
     @Override
     public void doInterval(int i) {
         vpTop.smoothScrollToPosition(i);
-
     }
 }

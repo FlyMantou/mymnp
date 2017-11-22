@@ -1,7 +1,7 @@
 package com.huanghai.empty.zhihu.model.dailymodel;
 
-import com.hpw.mvpframe.data.net.RxService;
-import com.hpw.mvpframe.utils.helper.RxUtil;
+import com.myhuanghai.mvpcore.data.net.RxService;
+import com.myhuanghai.mvpcore.utils.helper.RxUtil;
 import com.huanghai.empty.api.ZhiHuApi;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
 

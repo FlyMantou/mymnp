@@ -5,7 +5,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.hpw.mvpframe.CoreApp;
+import com.myhuanghai.mvpcore.CoreApp;
 
 /**
  * Created by huanghai on 2017/4/6.
@@ -19,8 +19,8 @@ public class App extends CoreApp {
     public static int DIMEN_DPI = -1;
     @Override
     public String setBaseUrl() {
-       // return "http://www.myhuanghai.com/tp5/public/index.php/";
-        return "http://news-at.zhihu.com/api/4/";
+        return "http://www.myhuanghai.com/tp5/public/index.php/";
+       // return "http://news-at.zhihu.com/api/4/";
     }
 
 

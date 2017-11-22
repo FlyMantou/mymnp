@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.hpw.mvpframe.base.CoreBaseLazyFragment;
-import com.hpw.mvpframe.widget.GlideCircleTransform;
-import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
-import com.hpw.mvpframe.widget.recyclerview.BaseViewHolder;
-import com.hpw.mvpframe.widget.recyclerview.CoreRecyclerView;
-import com.hpw.mvpframe.widget.recyclerview.listener.OnItemClickListener;
+import com.myhuanghai.mvpcore.base.CoreBaseLazyFragment;
+import com.myhuanghai.mvpcore.widget.GlideCircleTransform;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseQuickAdapter;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseViewHolder;
+import com.myhuanghai.mvpcore.widget.recyclerview.CoreRecyclerView;
+import com.myhuanghai.mvpcore.widget.recyclerview.listener.OnItemClickListener;
 import com.huanghai.empty.R;
 import com.huanghai.empty.zhihu.model.quick.QuickModel;
 import com.huanghai.empty.zhihu.model.quick.Status;

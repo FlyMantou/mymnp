@@ -9,7 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.hpw.mvpframe.base.CoreBaseActivity;
+import com.myhuanghai.mvpcore.base.CoreBaseActivity;
 import com.huanghai.empty.R;
 import com.huanghai.empty.zhihu.fragment.ZhihuMainFragment;
 
@@ -24,6 +24,11 @@ public class ZhihuMainActivity extends CoreBaseActivity
     NavigationView navigationView;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
+
+    @Override
+    protected void initData() {
+
+    }
 
     @Override
     protected void onResume() {

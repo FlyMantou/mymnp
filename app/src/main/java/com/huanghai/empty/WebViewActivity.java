@@ -9,9 +9,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.hpw.mvpframe.base.CoreBaseActivity;
-import com.hpw.mvpframe.utils.NetUtils;
-import com.hpw.mvpframe.utils.SpUtil;
+import com.myhuanghai.mvpcore.base.CoreBaseActivity;
+import com.myhuanghai.mvpcore.utils.NetUtils;
+import com.myhuanghai.mvpcore.utils.SpUtil;
 
 import butterknife.BindView;
 
@@ -20,6 +20,11 @@ public class WebViewActivity extends CoreBaseActivity {
     Toolbar toolBar;
     @BindView(R.id.wv_tech_content)
     WebView wvTechContent;
+
+    @Override
+    protected void initData() {
+
+    }
 
     @Override
     public int getLayoutId() {

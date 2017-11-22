@@ -3,8 +3,8 @@ package com.huanghai.empty;
 import android.Manifest;
 import android.os.Bundle;
 
-import com.hpw.mvpframe.base.CoreBaseActivity;
-import com.hpw.mvpframe.utils.helper.RxUtil;
+import com.myhuanghai.mvpcore.base.CoreBaseActivity;
+import com.myhuanghai.mvpcore.utils.helper.RxUtil;
 import com.huanghai.empty.main.activity.MainActivity;
 import com.huanghai.empty.zhihu.activity.ZhihuMainActivity;
 import com.tbruyelle.rxpermissions.RxPermissions;
@@ -24,6 +24,11 @@ public class SplashActivity extends CoreBaseActivity {
     }
 
     @Override
+    protected void initData() {
+
+    }
+
+    @Override
     public boolean isOpen() {
         return true;
     }
@@ -36,9 +41,10 @@ public class SplashActivity extends CoreBaseActivity {
                 .compose(RxUtil.rxSchedulerHelper())
                 .subscribe(permission -> {
                     if (permission.granted) {
-                        startActivity(com.huanghai.empty.Style1Main.activity.MainActivity.class);
+                        startActivity(com.huanghai.empty.main.activity.MainActivity.class);
                         finish();
                     }
                 });
     }
+
 }

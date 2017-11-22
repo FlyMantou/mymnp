@@ -1,6 +1,6 @@
 package com.huanghai.empty.api;
 
-import com.hpw.mvpframe.data.entity.CoreDataResponse;
+import com.myhuanghai.mvpcore.data.entity.CoreDataResponse;
 import com.huanghai.empty.zhihu.model.wechatmodel.WXItemBean;
 
 import java.util.List;

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/main_color">
+    android:background="@color/main_red">
 
     <ImageView
         android:id="@+id/back"

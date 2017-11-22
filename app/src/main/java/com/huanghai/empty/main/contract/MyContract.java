@@ -1,8 +1,8 @@
 package com.huanghai.empty.main.contract;
 
-import com.hpw.mvpframe.base.CoreBaseModel;
-import com.hpw.mvpframe.base.CoreBasePresenter;
-import com.hpw.mvpframe.base.CoreBaseView;
+import com.myhuanghai.mvpcore.base.CoreBaseModel;
+import com.myhuanghai.mvpcore.base.CoreBasePresenter;
+import com.myhuanghai.mvpcore.base.CoreBaseView;
 import com.huanghai.empty.main.model.MyListBean;
 
 

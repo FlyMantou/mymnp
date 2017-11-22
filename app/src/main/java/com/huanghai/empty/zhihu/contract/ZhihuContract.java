@@ -1,8 +1,8 @@
 package com.huanghai.empty.zhihu.contract;
 
-import com.hpw.mvpframe.base.CoreBaseModel;
-import com.hpw.mvpframe.base.CoreBasePresenter;
-import com.hpw.mvpframe.base.CoreBaseView;
+import com.myhuanghai.mvpcore.base.CoreBaseModel;
+import com.myhuanghai.mvpcore.base.CoreBasePresenter;
+import com.myhuanghai.mvpcore.base.CoreBaseView;
 import com.huanghai.empty.zhihu.model.dailymodel.DailyListBean;
 import com.huanghai.empty.zhihu.model.dailymodel.ZhihuDetailBean;
 import com.huanghai.empty.zhihu.model.sectionmodel.SectionChildListBean;

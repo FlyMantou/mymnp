@@ -21,11 +21,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.hpw.mvpframe.base.CoreBaseActivity;
-import com.hpw.mvpframe.utils.HtmlUtil;
-import com.hpw.mvpframe.utils.NetUtils;
-import com.hpw.mvpframe.utils.SnackbarUtil;
-import com.hpw.mvpframe.utils.SpUtil;
+import com.myhuanghai.mvpcore.base.CoreBaseActivity;
+import com.myhuanghai.mvpcore.utils.HtmlUtil;
+import com.myhuanghai.mvpcore.utils.NetUtils;
+import com.myhuanghai.mvpcore.utils.SnackbarUtil;
+import com.myhuanghai.mvpcore.utils.SpUtil;
 import com.huanghai.empty.Constants;
 import com.huanghai.empty.R;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
@@ -61,6 +61,11 @@ public class ZhihuDetailsActivity extends CoreBaseActivity<ZhihuDetailsPresenter
     boolean isTransitionEnd = false;
     boolean isImageShow = false;
     String imgUrl;
+
+    @Override
+    protected void initData() {
+
+    }
 
     @Override
     public int getLayoutId() {

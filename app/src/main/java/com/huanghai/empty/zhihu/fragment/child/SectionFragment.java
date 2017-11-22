@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.hpw.mvpframe.base.CoreBaseFragment;
-import com.hpw.mvpframe.utils.DisplayUtils;
-import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
-import com.hpw.mvpframe.widget.recyclerview.BaseViewHolder;
-import com.hpw.mvpframe.widget.recyclerview.CoreRecyclerView;
-import com.hpw.mvpframe.widget.recyclerview.animation.BaseAnimation;
+import com.myhuanghai.mvpcore.base.CoreBaseFragment;
+import com.myhuanghai.mvpcore.utils.DisplayUtils;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseQuickAdapter;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseViewHolder;
+import com.myhuanghai.mvpcore.widget.recyclerview.CoreRecyclerView;
+import com.myhuanghai.mvpcore.widget.recyclerview.animation.BaseAnimation;
 import com.huanghai.empty.App;
 import com.huanghai.empty.R;
 import com.huanghai.empty.zhihu.contract.ZhihuContract;
