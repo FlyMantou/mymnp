@@ -1,6 +1,6 @@
-package com.hpw.mvpframe.base;
+package com.myhuanghai.mvpcore.base;
 
-import com.hpw.mvpframe.data.repository.Repository;
+import com.myhuanghai.mvpcore.data.repository.Repository;
 
 /**
  * Created by hpw on 16/11/1.

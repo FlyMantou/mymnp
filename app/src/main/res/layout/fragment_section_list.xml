@@ -6,7 +6,7 @@
 
     <include layout="@layout/layout_toolbar" />
 
-    <com.hpw.mvpframe.widget.recyclerview.CoreRecyclerView
+    <com.myhuanghai.mvpcore.widget.recyclerview.CoreRecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

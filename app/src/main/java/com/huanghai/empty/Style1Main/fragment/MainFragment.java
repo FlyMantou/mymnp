@@ -120,18 +120,6 @@ public class MainFragment extends CoreBaseFragment<MainPresenter, MainModel> imp
     public void showTabList(String[] mTabs,int[] mTabsIcons) {
         //TabLayout配合ViewPager有时会出现不显示Tab文字的Bug,需要按如下顺序
         for (int i = 0; i < mTabs.length; i++) {
-            /*TabLayout.Tab tab=tabs.newTab();
-            View view= LayoutInflater.from(getActivity()).inflate(R.layout.layout_tabbar_item,null);
-            TextView tv= (TextView) view.findViewById(R.id.main_tv);
-            tv.setText(mTabs[i]);
-            view.findViewById(R.id.img).setBackgroundResource(mTabsIcons[i]);
-
-            tab.setCustomView(view);
-            if (i==0)
-                tv.setFocusable(true);*/
-
-
-
            tabs.addTab(tabs.newTab().setText(mTabs[i]).setIcon(mTabsIcons[i]));
 
             switch (i) {

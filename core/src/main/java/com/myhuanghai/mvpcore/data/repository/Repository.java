@@ -1,8 +1,8 @@
-package com.hpw.mvpframe.data.repository;
+package com.myhuanghai.mvpcore.data.repository;
 
 import android.database.Observable;
 
-import com.hpw.mvpframe.base.CoreBaseRepository;
+import com.myhuanghai.mvpcore.base.CoreBaseRepository;
 
 import java.util.Map;
 

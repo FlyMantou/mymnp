@@ -1,8 +1,8 @@
-package com.hpw.mvpframe.widget.recyclerview.listener;
+package com.myhuanghai.mvpcore.widget.recyclerview.listener;
 
 import android.view.View;
 
-import com.hpw.mvpframe.widget.recyclerview.BaseQuickAdapter;
+import com.myhuanghai.mvpcore.widget.recyclerview.BaseQuickAdapter;
 
 public abstract class OnItemLongClickListener extends SimpleClickListener {
 

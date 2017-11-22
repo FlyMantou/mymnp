@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.hpw.mvpframe.widget.recyclerview.recyclerviewpager.LoopRecyclerViewPager
+    <com.myhuanghai.mvpcore.widget.recyclerview.recyclerviewpager.LoopRecyclerViewPager
         android:id="@+id/vp_top"
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_viewpager_height"

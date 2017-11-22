@@ -41,7 +41,7 @@ public class SplashActivity extends CoreBaseActivity {
                 .compose(RxUtil.rxSchedulerHelper())
                 .subscribe(permission -> {
                     if (permission.granted) {
-                        startActivity(com.huanghai.empty.main.activity.MainActivity.class);
+                        startActivity(com.huanghai.empty.Style1Main.activity.MainActivity.class);
                         finish();
                     }
                 });
